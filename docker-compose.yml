@@ -11,3 +11,8 @@ services:
       - type: bind
         source: ./nginx/passwords
         target: /etc/nginx/passwords
+  app:
+    image: sample
+    ports:
+      - "5000:5000"
+    
