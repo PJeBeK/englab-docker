@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  nginx:
+    image: nginx
+    ports:
+      - "5002:5002"
+    volumes:
+      - type: bind
+        source: ./nginx/app.conf
+        target: /etc/nginx/conf.d/app.conf
+      - type: bind
+        source: ./nginx/passwords
+        target: /etc/nginx/passwords
